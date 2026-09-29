@@ -1,0 +1,71 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="xyv" x1="70" y1="60" x2="450" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9D5FF"/>
+      <stop offset="0.42" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(256 220) rotate(90) scale(300)">
+      <stop stop-color="#241447"/>
+      <stop offset="1" stop-color="#080611"/>
+    </radialGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="256" cy="256" r="238" fill="url(#bg)" stroke="url(#xyv)" stroke-width="4"/>
+
+  <circle
+    cx="256"
+    cy="256"
+    r="190"
+    stroke="url(#xyv)"
+    stroke-width="2"
+    opacity="0.35"
+  />
+
+  <g filter="url(#glow)">
+    <path
+      d="M145 125L256 242L367 125"
+      stroke="url(#xyv)"
+      stroke-width="34"
+      stroke-linecap="square"
+      stroke-linejoin="miter"
+    />
+
+    <path
+      d="M145 387L256 270L367 387"
+      stroke="url(#xyv)"
+      stroke-width="34"
+      stroke-linecap="square"
+      stroke-linejoin="miter"
+    />
+
+    <path
+      d="M256 242V270"
+      stroke="#E9D5FF"
+      stroke-width="20"
+    />
+  </g>
+
+  <text
+    x="256"
+    y="447"
+    text-anchor="middle"
+    fill="#D8D5E8"
+    font-family="Arial, sans-serif"
+    font-size="26"
+    font-weight="700"
+    letter-spacing="8"
+  >
+    XYV
+  </text>
+</svg>
